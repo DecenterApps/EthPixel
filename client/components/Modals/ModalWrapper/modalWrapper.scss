@@ -1,0 +1,21 @@
+.modal-content {
+  width: 500px;
+}
+
+.modal-header {
+  justify-content: flex-end;
+  border-bottom: 0;
+
+  span {
+    display: flex;
+    cursor: pointer;
+    margin: 5px 10px 0 0;
+  }
+}
+
+.modal-wrapper-body {
+  padding: 6px 40px 40px 40px;
+
+  display: flex;
+  justify-content: center;
+}

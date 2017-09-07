@@ -1,0 +1,196 @@
+.form-name {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-wrapper {
+  width: 100%;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  $errorColor: #F57170;
+
+
+  .form-item-wrapper {
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+    .form-item {
+      border: 2px solid #E2E2E2;
+      border-radius: 3px;
+      padding: 19px 0 19px 25px;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .form-item-error {
+      border-color: $errorColor;
+      outline-color: $errorColor;
+    }
+
+    div.form-item-error {
+      position: absolute;
+      color: $errorColor;
+      top: 65px;
+    }
+  }
+
+  .submit-error {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: $errorColor;
+  }
+
+  .submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background: rgba(71, 163, 217, 0.8);
+    padding: 19px 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: lighten(rgba(71, 163, 217, 0.8), 15);
+    }
+
+    &:disabled {
+      user-select: none;
+      cursor: not-allowed;
+      background: lighten(rgba(71, 163, 217, 0.8), 30);
+    }
+
+    .small-block-loader-wrapper {
+      margin: 0 10px 0 0;
+      display: inline-flex;
+      transform: scale(0.60);
+
+      .sk-cube-grid {
+        width: 20px;
+        height: 20px;
+
+        .sk-cube {
+          background: white;
+        }
+      }
+    }
+  }
+
+  .coors-info-wrapper {
+    display: flex;
+    font-size: 20px;
+    margin: 15px;
+    justify-content: space-evenly;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .pixel-status {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+
+    &.smaller {
+      font-size: 17px;
+    }
+  }
+
+  .single-pixel-info {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    .portion-name {
+      margin-right: 5px;
+    }
+
+    .pixel-amount {
+      font-weight: 700;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    a {
+      font-size: 14px;
+      font-family: monospace;
+    }
+  }
+
+  .small-block-loader-wrapper {
+    margin: 100px 0 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .sk-cube-grid {
+      margin-right: 0;
+      width: 50px;
+      height: 50px;
+    }
+
+    .sk-cube-grid .sk-cube {
+      background: #746d6d;
+    }
+  }
+
+  .picker-wrapper {
+    position: relative;
+
+    .example-color {
+      width: 100%;
+      height: 30px;
+      border: 1px solid lightgray;
+      border-radius: 3px;
+      margin-bottom: 20px;
+    }
+
+    .chrome-picker {
+      width: 100% !important;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 0 1px, rgba(0, 0, 0, 0.2) 0 0 8px !important;
+    }
+
+    .color-input {
+      position: absolute;
+      top: 287px;
+      width: 390px;
+      left: 14px;
+
+      .form-item-error {
+        top: 66px;
+        left: -15px;
+      }
+
+      .form-item {
+        padding: 10px 0 10px 15px;
+      }
+    }
+  }
+
+  .get-pixel-error {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: $errorColor;
+  }
+
+  .price-info {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}

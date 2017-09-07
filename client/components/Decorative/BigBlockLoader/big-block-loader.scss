@@ -1,0 +1,163 @@
+$bw: 75px; // BRICK WIDTH
+$bh: 320px; // BRICK HEIGHT
+$rw: 225px; // RING WIDTH
+$rh: 40px; // RING HEIGHT
+$rb: cubic-bezier(0, 0.3, 0, 1); // RING BEZIER
+$anim-drt: 1s;
+
+.big-block-loader-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(71, 163, 217, 0.8);
+
+  div {
+    transform-style: preserve-3d;
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.brick {
+  width: $bw;
+  height: $bh;
+  position: relative;
+  transform: rotateX(-15deg) rotateY(45deg);
+  animation: bounce $anim-drt / 2 infinite alternate cubic-bezier(1, 0, 1, 0);
+  div {
+    position: absolute;
+    // TOP
+    &:nth-child(1) {
+      width: $bw;
+      height: $bw;
+      transform: translateY(-$bw / 2) rotateX(90deg) rotateZ(0deg);
+      background: #ffd024;
+    }
+    // RIGHT
+    &:nth-child(2) {
+      width: $bw;
+      height: $bh;
+      transform: translateZ($bw / 2);
+      background: #fbae20;
+    }
+    // LEFT
+    &:nth-child(3) {
+      width: $bw;
+      height: $bh;
+      transform: translateX(-$bw / 2) rotateY(90deg);
+      background: #fff931;
+    }
+  }
+}
+
+.ring {
+  width: $rw;
+  height: $rh;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotateX(-15deg) rotateY(45deg);
+  animation: spin $anim-drt $anim-drt / 2 infinite $rb;
+  &:nth-child(2) {
+    top: 25%;
+  }
+  &:nth-child(3) {
+    top: 55%;
+  }
+  div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // LEFT OUTSIDE
+    &:nth-child(1) {
+      transform: translateX(-$rw / 2) rotateY(90deg);
+      background: #fffff7;
+    }
+    // RIGHT OUTSIDE
+    &:nth-child(2) {
+      transform: translateZ($rw / 2);
+      background: #c7c39a;
+      animation: color1 $anim-drt $anim-drt / 2 infinite $rb;
+    }
+    // BACK OUTSIDE
+    &:nth-child(3) {
+      transform: translateX($rw / 2) rotateY(90deg);
+      background: #c7c39a;
+    }
+    // LEFT TOP
+    &:nth-child(4) {
+      transform: translateY(-$rh / 2) translateX(-$rw / 2 + $rh / 2) rotateX(90deg) rotateZ(90deg);
+      background: #ebebc3;
+    }
+    // RIGHT TOP
+    &:nth-child(5) {
+      transform: translateY(-$rh / 2) translateZ($rw / 2 - $rh / 2) rotateX(90deg);
+      background: #ebebc3;
+    }
+    // BACK RIGHT TOP
+    &:nth-child(6) {
+      transform: translateY(-$rh / 2) translateX($rw / 2 - $rh / 2) rotateX(90deg) rotateZ(90deg);
+      background: #ebebc3;
+    }
+    // BACK LEFT TOP
+    &:nth-child(7) {
+      transform: translateY(-$rh / 2) translateZ(-$rw / 2 + $rh / 2) rotateX(90deg) rotateZ(0deg);
+      background: #ebebc3;
+    }
+    // LEFT INSIDE
+    &:nth-child(8) {
+      transform: translateX(-$rw / 2 + $rh) rotateY(90deg);
+      background: #c7c39a;
+    }
+    // LEFT BACK INSIDE
+    &:nth-child(9) {
+      transform: translateZ(-$rw / 2 + $rh);
+      background: #fffff7;
+      animation: color1 $anim-drt $anim-drt / 2 infinite $rb;
+    }
+    // RIGHT BACK INSIDE
+    &:nth-child(10) {
+      transform: translateX($rw / 2 - $rh) rotateY(90deg);
+      background: #fffff8;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotateX(-15deg) rotateY(45deg);
+  }
+  100% {
+    transform: translateY(40px) rotateX(-15deg) rotateY(45deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(-50%) rotateX(-15deg) rotateY(45deg);
+  }
+  100% {
+    transform: translateX(-50%) rotateX(-15deg) rotateY(-45deg);
+  }
+}
+
+@keyframes color1 {
+  0% {
+    background: #c7c39a;
+  }
+  100% {
+    background: #fffff7;
+  }
+}
+
+@keyframes color2 {
+  0% {
+    background: #fffff7;
+  }
+  100% {
+    background: #c7c39a;
+  }
+}

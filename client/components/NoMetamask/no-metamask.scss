@@ -1,0 +1,24 @@
+.no-metamask-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(71, 163, 217, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    max-width: 1300px;
+    padding: 0 50px;
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    line-height: 47px;
+
+    a {
+      margin: 0 5px;
+    }
+  }
+}

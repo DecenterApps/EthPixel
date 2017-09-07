@@ -1,0 +1,42 @@
+.slide-menu-info-wrapper {
+  color: white;
+
+  .slide-menu-body {
+
+    .menu-section {
+      margin-bottom: 20px;
+
+      h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .info-icon {
+    z-index: 1;
+  }
+
+  .cbp-spmenu-vertical {
+    width: 500px;
+  }
+
+  .cbp-spmenu-left {
+    left: -500px;
+  }
+
+  .cbp-spmenu.menu-open {
+    left: 0;
+  }
+
+  .info-icon {
+    left: 20px;
+    top: 65px;
+  }
+}

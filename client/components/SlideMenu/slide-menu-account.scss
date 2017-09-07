@@ -1,0 +1,117 @@
+.slide-menu-account-wrapper {
+  color: white;
+
+  .toggle-menu-icon.shake .account-icon {
+    animation: shake 1.5s cubic-bezier(.36,.07,.19,.97) both infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  .account-icon {
+    left: 20px;
+    z-index: 1;
+    top: 20px;
+  }
+
+  .notification {
+    background: white;
+    color: black;
+    padding: 10px 60px 10px 10px;
+    margin-bottom: 20px;
+    position: relative;
+
+    .close-icon {
+      right: 20px;
+
+      .close-icon-path {
+        fill: black;
+      }
+    }
+
+    .color {
+      outline: 0;
+      cursor: pointer;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      position: relative;
+      top: -1px;
+    }
+
+    span {
+      margin-right: 5px;
+    }
+
+    &.success {
+      border-top: 5px solid #33B372;
+      color: #33B372;
+    }
+
+    &.error {
+      border-top: 5px solid #c71e32;
+      color: #c71e32;
+    }
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  .address, .no-pixels, .total {
+    margin-bottom: 20px;
+  }
+
+  .no-pixels {
+    font-size: 20px;
+  }
+
+  .cbp-spmenu-vertical {
+    width: 500px;
+  }
+
+  .cbp-spmenu-left {
+    left: -500px;
+  }
+
+  .cbp-spmenu.menu-open {
+    left: 0;
+  }
+
+  .table {
+    background: rgba(white, 0.9);
+    color: rgba(#FF7549, 0.8);
+
+    .pixel-color-box {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+
+    .td:not(.amount-cell) {
+      flex-grow: 0.5;
+    }
+
+    .amount-cell {
+      justify-content: flex-start;
+    }
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+}
