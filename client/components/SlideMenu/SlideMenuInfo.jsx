@@ -61,7 +61,7 @@ const SlideMenuInfo = ({ $toggleSlideMenu, menuOpen }) => (
             If the project gets more traction, I will continue to improve it further.
             The idea is also to raise awareness of Ethereum and blockchain in
             general and to show people that you can do cool stuff with it.
-            Feel free to donate if you feel like it :) (ETH ADDRESS).
+            Feel free to donate if you feel like it :) (0x90C33B4aD1FCcB244D1A9B20C7f079bF33c8f377).
           </div>
         </div>
       </div>
